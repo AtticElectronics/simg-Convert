@@ -45,3 +45,12 @@ $ simg.py /Users/PC/Desktop/img.png -r 50 50 -b 255 0 0 -t 0
 $ simg.py /Users/PC/Desktop/ImageFolder -r 50 50 -b 255 0 0 -t 0
   /Users/PC/Desktop 경로에 simgXXXXX 폴더가 생성되고 그안에 .simg 이미지로 변환됨
 ```
+
+## 관련 자료(Additional Related Resources)
+#### .simg
+#### simg코덱(simg codec) : https://github.com/Fluoritee/simg-codec
+#### simg이미지 변환기(Image convertor) : https://github.com/Fluoritee/simg-convert
+#### simg라이브러리(Library) : https://github.com/Fluoritee/simg-Sprite
+
+
+

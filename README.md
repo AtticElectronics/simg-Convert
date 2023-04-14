@@ -1,6 +1,6 @@
 # simg-convert
-이미지 파일을 .simg로 변환해주는 프로그램
-Program to convert image files to .simg
+이미지 파일을 .simg로 변환해주는 프로그램   
+Program to convert image files to .simg 
 
 
 ## 요약

@@ -12,6 +12,23 @@
 2. format2 : [ 2byte:width ] [ 2byte:height ] [ 1byte:00000010 ] [ 2byte: RGB565 ][ 1byte: count  ]  ...
 3. format1 과 format2 중에 용량이 작은 방식으로 선택적으로 사용가능
 ***
+
+
+## 컨버터 사용법
+***
+
+
+```shell
+$ git clone https://github.com/Fluoritee/simg-convert.git
+$ cd simg-convert
+$ pip install -r requirements.txt
+$ python simg.py [이지지파일] -w [출력 이미지 넓이] -h [출력 이미지 높이] -t [투명도 임계값]
+$ python simg.sh -h 
+ [매개변수 설명 ...]
+$ simg.sh /Users/PC/Desktop/ImageFolder -r 50 50 -b 255 0 0 -t 0
+ /Users/PC/Desktop 경로에 simg날짜xxxxx이미지 s생성됨
+```
+
 ## How to use (Arduino IDE)
 #### Downlaod this : https://github.com/Fluoritee/simg-Sprite
 #### install zip lib
@@ -30,30 +47,4 @@ void setup() {
   
   sprites = simg.load("/1.simg");
   sprites->pushSprite(0,0,simg.TRANS);
-```
-
-# 컨버터 사용법
-***
-
-```shell
-% python simg.sh -h
-(base) laptop@fluoritesims-MacBook-Pro ~ % simg.sh -h
-usage: simg.py [-h] [-r RESIZE RESIZE] [-b BACKGROUND BACKGROUND BACKGROUND] [-t THRESHOLD] file
-
-입력인자를 설명해드립니다.
-
-positional arguments:
-  file                  변경할 이미지파일이나, 이미지파일들이있는 폴더의 전체 경로
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -r RESIZE RESIZE, --resize RESIZE RESIZE
-                        변경될 이미지 사이즈 입력 (default: 변경 안함)
-  -b BACKGROUND BACKGROUND BACKGROUND, --background BACKGROUND BACKGROUND BACKGROUND
-                        배경색 R G B 입력 (default: 255 255 255)
-  -t THRESHOLD, --threshold THRESHOLD
-                        threshold 이하의 알파값은 투명으로 간주(-1 일때, 전부 불투명) (default: 0)
-```
-```shell
-$ simg.sh /Users/laptop/Desktop/weathericon -r 50 50 -b 255 0 0 -t 0
 ```

@@ -1,7 +1,11 @@
 # simg-convert
-***
-## what .simg
-#### Downlaod this : https://github.com/Fluoritee/simg-Sprite
+
+```shell
+ [convert image.png to image.simg]
+$ python simg.py ./image.png
+$ cd simgXXXXX && ls
+ image.simg
+```
 
 ## 컨버터 사용법
 1. 변환 가능 이미지 : BMP (Windows 비트맵)
@@ -19,21 +23,36 @@ TGA (Truevision Targa)
 TIFF (Tagged Image File Format)
 WEBP (WebP image format)
 XBM (X Window System bitmap)
-2. 
-3. 아웃풋 : .simg
+2. 여러개 동시변환 : 이미지 파일 이름 대신, 이미지 파일들이 있는 폴더를 입력
+
+# 설치(Install)
 ```shell
 $ git clone https://github.com/Fluoritee/simg-convert.git
 $ cd simg-convert
 $ pip install -r requirements.txt
+
+```
+# 간단 설명(Simple explanation)
+```shell
 $ python simg.py [이지지파일] -w [출력 이미지 넓이] -h [출력 이미지 높이] -t [투명도 임계값]
-$ python simg.sh -h 
+$ python simg.py -h 
  [매개변수 설명 ...]
-$ simg.sh /Users/PC/Desktop/img.png -r 50 50 -b 255 0 0 -t 0
- /Users/PC/Desktop 경로에 simgXXXXX 폴더가 생성되고 그안에 img.simg가생성됨
-$ simg.sh /Users/PC/Desktop/ImageFolder -r 50 50 -b 255 0 0 -t 0
- /Users/PC/Desktop 경로에 simgXXXXX 폴더가 생성되고 그안에 .simg 이미지로 변환됨
+$ simg.py /Users/PC/Desktop/img.png -r 50 50 -b 255 0 0 -t 0
+  /Users/PC/Desktop 경로에 simgXXXXX 폴더가 생성되고 그안에 img.simg가생성됨
+$ simg.py /Users/PC/Desktop/ImageFolder -r 50 50 -b 255 0 0 -t 0
+  /Users/PC/Desktop 경로에 simgXXXXX 폴더가 생성되고 그안에 .simg 이미지로 변환됨
 ```
 
+# 관련 자료(Additional Related Resources)
+## .simg
+#### simg코덱(simg codec) : https://github.com/Fluoritee/simg-codec
+#### simg이미지 변환기(Image convertor) : https://github.com/Fluoritee/simg-convert
+#### simg라이브러리(Library) : https://github.com/Fluoritee/simg-Sprite
+
+
+
+## what .simg
+#### Downlaod this : https://github.com/Fluoritee/simg-Sprite
 ***
 ## .simg 데이터 구성
 1. format1 : [ 2byte:width ] [ 2byte:height ] [ 1byte:00000001 ] [ 2byte: RGB565 ][ 2byte: RGB565 ]  ...
